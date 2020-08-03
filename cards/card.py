@@ -26,7 +26,7 @@ def maybe_create_card(line: str) -> Optional[Card]:
     if line.count(NOTE_DELIMETER) != 2:
         return
 
-    w1, w2, definition = line.split(" - ")
+    w1, w2, definition = line.split(NOTE_DELIMETER)
 
     # Check for empty notes
     if not all([w1, w2, definition]):
