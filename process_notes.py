@@ -5,7 +5,7 @@ import csv
 import fileinput
 import string
 
-from card import Card, maybe_create_card, filter_duplicate_kana
+from cards.card import Card, filter_duplicate_kana, maybe_create_card
 
 
 def make_cards() -> List[Card]:
@@ -23,8 +23,8 @@ def process_notes() -> None:
     cards = make_cards()
     with open("process_notes_out.tsv", "w", newline="", encoding="utf-8") as file_out:
         csv_out = csv.writer(file_out, delimiter="\t")
-        for card in cards:
-            csv_out.writerow(card)
+        for c in cards:
+            csv_out.writerow(c)
 
 
 if __name__ == "__main__":

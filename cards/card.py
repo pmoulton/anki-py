@@ -2,7 +2,7 @@ from typing import List, NamedTuple, Optional
 
 import string
 
-from card_constants import IGNORE_TEXT, NOTE_DELIMETER
+from cards.constants import IGNORE_TEXT, NOTE_DELIMETER
 
 
 class Card(NamedTuple):
